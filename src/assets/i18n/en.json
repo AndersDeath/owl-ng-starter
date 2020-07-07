@@ -1,0 +1,14 @@
+{
+  "nav" : {
+    "first": "First page",
+    "second": "Second page"
+  },
+  "pages": {
+    "first": {
+      "title": "First page"
+    },
+    "second": {
+      "title": "Second page"
+    }
+  }
+}

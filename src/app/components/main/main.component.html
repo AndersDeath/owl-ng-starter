@@ -1,0 +1,31 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="example-sidenav"  mode="side" opened="true">
+    <div fxLayout="column">
+      <button fxFlex="100%" fxLayout="row" *ngFor="let item of nav" [routerLink]="item.path" mat-stroked-button color="primary">{{ item.title | translate}}</button>
+    </div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <mat-toolbar color="primary" fxLayoutAlign="space-between center">
+      <div fxLayout="column" fxFlex="50%">
+        <div>
+          <button (click)="drawer.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>{{ title }}</span>
+        </div>
+      </div>
+      <div fxLayout="column" fxFlex="50%" fxLayoutAlign="end end">
+        <button mat-icon-button color="accent"  [matMenuTriggerFor]="menu">
+          <mat-icon>language</mat-icon> {{ this.lang }}
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="changeLang('ru')">Русский</button>
+          <button mat-menu-item (click)="changeLang('en')">English</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>

@@ -1,5 +1,17 @@
 # OwlNgStarter
 
+## Description
+
+This is my simple starter pack for development.
+
+### What is there?
+
+* Angular
+* Angular Material
+* Angular Flex layout
+* Ngx-translate
+
+## About Angular version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
